@@ -13,7 +13,7 @@ async function cleanup() {
         // Execute the docker logout command
         let doLogoutStdout = '';
         let doLogoutStderr = '';
-        const exitCode = await exec.exec('docker logout', ['cr.yandex'], {
+        const exitCode = await exec.exec('docker logout', ['cr.cloudil.com'], {
             silent: true,
             ignoreReturnCode: true,
             listeners: {

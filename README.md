@@ -1,4 +1,4 @@
-## YC CR "Login" Action for GitHub Actions
+## CloudIL CR "Login" Action for GitHub Actions
 
 Logs in the local Docker client to Yandex Cloud Container Registry.
 
@@ -7,7 +7,6 @@ Logs in the local Docker client to Yandex Cloud Container Registry.
 <!-- toc -->
 
 - [Usage](#usage)
-- [Permissions](#permissions)
 - [License Summary](#license-summary)
 
 <!-- tocstop -->
@@ -15,27 +14,24 @@ Logs in the local Docker client to Yandex Cloud Container Registry.
 ## Usage
 
 ```yaml
-    - name: Login to Yandex Cloud Container Registry
+    - name: Login to CloudIL Cloud Container Registry
       id: login-cr
-      uses: yc-actions/yc-cr-login@v1
+      uses: cloudil-actions/cloudil-cr-login@v1
       with:
-        yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
+        cloudil-sa-json-credentials: ${{ secrets.CLIL_SA_JSON_CREDENTIALS }}
 
-    - name: Build, tag, and push image to Yandex Cloud Container Registry
+    - name: Build, tag, and push image to CloudIL Cloud Container Registry
       env:
         CR_REGISTRY: crp00000000000000000
         CR_REPOSITORY: my-cr-repo
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG .
-        docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
+        docker build -t cr.cloudil.com/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG .
+        docker push cr.cloudil.com/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
 ```
 
 See [action.yml](action.yml) for the full documentation for this action's inputs and outputs.
 
-## Permissions
-
-This action requires the following minimum set of permissions:
 
 
 ## License Summary

@@ -12,7 +12,7 @@ function mockGetInput(requestResponse) {
 }
 
 const DEFAULT_INPUTS = {
-    'yc-sa-json-credentials': '{}',
+    'cloudil-sa-json-credentials': '{}',
 };
 
 describe('Login to CR', () => {
@@ -38,7 +38,7 @@ describe('Login to CR', () => {
         expect(exec.exec).toHaveBeenCalledTimes(1);
         expect(exec.exec).toHaveBeenNthCalledWith(1,
             'docker login',
-            ['--username', 'json_key', '--password-stdin', 'cr.yandex'],
+            ['--username', 'json_key', '--password-stdin', 'cr.cloudil.com'],
             expect.anything());
         expect(core.saveState).toHaveBeenCalledTimes(0);
     });

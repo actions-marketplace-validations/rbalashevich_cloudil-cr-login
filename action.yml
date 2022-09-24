@@ -1,11 +1,11 @@
-name: 'Yandex Cloud CR "Login" Action for GitHub Actions'
-description: 'Logs in the local Docker client to YC CR'
+name: 'CloudIL Cloud CR "Login" Action for GitHub Actions'
+description: 'Logs in the local Docker client to CloudIL CR'
 branding:
   icon: 'cloud'
   color: 'blue'
 inputs:
-  yc-sa-json-credentials:
-    description: 'Json containing authorized key for Service Account. More info https://cloud.yandex.ru/docs/container-registry/operations/authentication#sa-json'
+  cloudil-sa-json-credentials:
+    description: 'Json containing authorized key for Service Account. More info https://cloudil.co.il/docs/container-registry/operations/authentication'
     required: true
 runs:
   using: 'node12'
