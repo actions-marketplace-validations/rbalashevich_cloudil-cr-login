@@ -1,6 +1,6 @@
 ## CloudIL CR "Login" Action for GitHub Actions
 
-Logs in the local Docker client to Yandex Cloud Container Registry.
+Logs in the local Docker client to CloudIL Container Registry.
 
 **Table of Contents**
 
